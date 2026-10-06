@@ -240,3 +240,147 @@
   opacity: 0.55;
   pointer-events: none;
 }
+
+/* Mock social-media post, for quoting the hype back at the room. Deliberately
+   breaks out of the deck's font set so it reads as a screenshot, not a slide. */
+.social-post {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  padding: 1rem 1.2rem 0.7rem;
+  font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  transform: rotate(-1deg);
+}
+
+.social-post-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.social-post-avatar {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0a66c2;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-post-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.social-post-meta {
+  font-size: 0.72rem;
+  color: #666;
+  line-height: 1.35;
+}
+
+.social-post-body {
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.social-post-body p {
+  margin: 0 0 0.55rem;
+}
+
+.social-post-tags {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.social-post-reactions {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Caveat aside under a diagram — the presenter's margin note. */
+.hand-note {
+  font-family: 'Caveat', cursive;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  opacity: 0.75;
+  padding-top: 0.6rem;
+}
+
+/* Legend row under a diagram: colour swatches matching the mermaid classDefs,
+   with the presenter's aside riding along on the right. */
+.legend {
+  /* Anchored to the slide's bottom edge (matching the default layout's px-14),
+     so the whitespace lands between diagram and legend instead of under both. */
+  position: absolute;
+  left: 3.5rem;
+  right: 3.5rem;
+  bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 0.95rem;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.legend i {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid #3f3f46;
+  border-radius: 2px;
+}
+
+.legend .hand-note {
+  padding-top: 0;
+  margin-left: auto;
+}
+
+.swatch-human  { background: #fde68a; }
+.swatch-system { background: #bfdbfe; }
+
+/* Cover: the comic strip runs full-height along the right edge, so the type
+   column is capped and the draft stamp moves out from under it. */
+.slidev-layout.cover .cover-comic {
+  position: absolute;
+  top: 2.2rem;
+  right: 2.8rem;
+  height: calc(100% - 4.4rem);
+  width: auto;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.cover h2 {
+  max-width: 58%;
+}
+
+.slidev-layout.cover .draft-badge {
+  right: auto;
+  left: 2.8rem;
+  bottom: 6.2rem;
+}
+
+/* The capped column makes both titles wrap to two lines; the 4rem line-height
+   from the rule above leaves a hole between them. */
+.slidev-layout.cover h1 {
+  line-height: 1.25;
+  margin-bottom: 0.7rem !important;
+}

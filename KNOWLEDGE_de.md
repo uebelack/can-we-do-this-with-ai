@@ -1,0 +1,1 @@
+Der Talk richtet sich an Entwickler und Architekten. Du solltest Code lesen können und schon mal eine REST-API konsumiert haben – das Live Coding ist in dieser Liga. Ein grobes Verständnis, was ein LLM ist und wie man es per API anspricht, hilft. Kein ML-, Data-Science- oder Prompt-Engineering-Vorwissen nötig; RAG, Guardrails und Tool-Use führen wir im Talk ein.

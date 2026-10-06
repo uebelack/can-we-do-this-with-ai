@@ -1,0 +1,1 @@
+Nach dem Talk kannst du einschätzen, welche Aufgaben im Unternehmen sich mit einem LLM sinnvoll automatisieren lassen und welche nicht. Du kennst die typischen Fehlerquellen (Halluzination, fehlendes Grounding, falsche Zahlen), weisst, wo Guardrails oder ein Mensch im Loop nötig sind, und wo ein LLM im Prozess sitzen darf statt fester Regeln.
