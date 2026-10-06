@@ -94,6 +94,67 @@ flowchart LR
 </div>
 
 ---
+
+# What is an LLM?
+
+A Large Language Model (LLM) is a kind of artificial intelligence designed to understand, predict and generate human-like text.
+
+<div class="pt-20">
+
+```mermaid {scale: 1.3}
+flowchart LR
+  start(( )) --> prompt("🙋<br/>Prompt")
+  prompt --> llm("🧠<br/>LLM")
+  llm --> result("📊<br/>Return result")
+  result --> done(( ))
+```
+
+</div>
+
+---
+
+# What is an AI Agent?
+
+An AI agent is a system that is given a goal and, with the help of a Large Language Model (LLM) and tools, decides for itself which steps are necessary – iterating until the goal is reached.
+
+<div class="pt-8">
+
+```mermaid {scale: 0.95}
+flowchart LR
+  start(( )) --> goal("🙋<br/>Define Goal")
+  goal --> llm("🧠<br/>LLM")
+  llm --> check{"Goal<br/>achieved?"}:::gateway
+  check -- no --> tools("🤖<br/>Tools")
+  tools --> llm
+  check -- yes --> result("📊<br/>Return result")
+  result --> done(( ))
+  classDef gateway font-size:19px;
+```
+
+</div>
+
+---
+
+# What is RAG?
+
+RAG (Retrieval-Augmented Generation) is an AI technique that improves an LLM's output with targeted information – without adapting the underlying model itself.
+
+<div class="pt-8">
+
+```mermaid {scale: 0.86}
+flowchart LR
+  start(( )) --> question("🙋<br/>Question")
+  question --> search("🔍<br/>Similarity<br/>search")
+  db[("🗄️<br/>Vector DB")] --> search
+  search --> prompt("💬<br/>Prompt<br/>+ Context")
+  prompt --> llm("🧠<br/>LLM")
+  llm --> result("📊<br/>Return result")
+  result --> done(( ))
+```
+
+</div>
+
+---
 layout: fact
 ---
 

@@ -94,6 +94,67 @@ flowchart LR
 </div>
 
 ---
+
+# Was ist ein LLM?
+
+Ein Large Language Model (LLM) ist eine Art von künstlicher Intelligenz, die darauf ausgelegt ist, menschenähnlichen Text zu verstehen, vorherzusagen und zu generieren.
+
+<div class="pt-20">
+
+```mermaid {scale: 1.3}
+flowchart LR
+  start(( )) --> prompt("🙋<br/>Prompt")
+  prompt --> llm("🧠<br/>LLM")
+  llm --> result("📊<br/>Return result")
+  result --> done(( ))
+```
+
+</div>
+
+---
+
+# Was ist ein KI-Agent?
+
+Ein KI-Agent ist ein System, das ein Ziel bekommt und mithilfe eines Large Language Models (LLM) und Tools selbst entscheidet, welche Schritte nötig sind – und so lange iteriert, bis es erreicht ist.
+
+<div class="pt-8">
+
+```mermaid {scale: 0.95}
+flowchart LR
+  start(( )) --> goal("🙋<br/>Define Goal")
+  goal --> llm("🧠<br/>LLM")
+  llm --> check{"Goal<br/>achieved?"}:::gateway
+  check -- no --> tools("🤖<br/>Tools")
+  tools --> llm
+  check -- yes --> result("📊<br/>Return result")
+  result --> done(( ))
+  classDef gateway font-size:19px;
+```
+
+</div>
+
+---
+
+# Was ist RAG?
+
+RAG (Retrieval-Augmented Generation) ist eine KI-Technik, mit der sich die Ausgabe eines LLM durch gezielte Informationen optimieren lässt, ohne das zugrunde liegende Modell selbst anzupassen.
+
+<div class="pt-8">
+
+```mermaid {scale: 0.86}
+flowchart LR
+  start(( )) --> question("🙋<br/>Question")
+  question --> search("🔍<br/>Similarity<br/>search")
+  db[("🗄️<br/>Vector DB")] --> search
+  search --> prompt("💬<br/>Prompt<br/>+ Context")
+  prompt --> llm("🧠<br/>LLM")
+  llm --> result("📊<br/>Return result")
+  result --> done(( ))
+```
+
+</div>
+
+---
 layout: fact
 ---
 
