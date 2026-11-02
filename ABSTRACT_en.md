@@ -1,3 +1,5 @@
+Can We Do That with AI? – What Your Company Can Really Automate with LLMs
+
 The hype around AI isn't unfounded: for us developers, a lot has changed in recent years. We hardly write code ourselves anymore; we let our agents do the programming. But does that carry over to other tasks in a company? Can we really improve our processes with LLMs, or even replace entire tasks with AI?
 
 In this talk, we take an honest look: what can really be automated with LLMs, what can't, and which risks come with each of these options? Instead of slide theory, you get live coding on concrete examples: automating research work, moderating customer posts, answering customer inquiries automatically, and building internal and external chat assistants.
